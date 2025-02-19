@@ -5,3 +5,8 @@
 .font-sora{
   font-family: "Sora", serif;
 }
+
+.active {
+  background-color: cyan;
+  color: blue;
+}
