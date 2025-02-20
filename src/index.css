@@ -10,3 +10,7 @@
   background-color: cyan;
   color: blue;
 }
+
+@theme {
+  --color-blueviolet-100: #9538E2
+}

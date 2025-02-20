@@ -3,7 +3,7 @@ import Banner from "../Banner/Banner";
 
 const HomeContents = () => {
     return (
-        <main>
+        <main className="bg-[#ECECEC] pb-56">
             <Banner></Banner>
         </main>
     );
