@@ -1,15 +1,9 @@
-import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import Product from "../Product/Product";
 
-const Products = () => {
-    const [products, setProducts] = useState([]);
-
-    useEffect( () => {
-        fetch('gadgets.json')
-            .then( res => res.json())
-            .then(data => setProducts(data))
-    } , [])
-
+const Products = ({products}) => {   
+    // console.log(products);
+    
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {
@@ -18,5 +12,9 @@ const Products = () => {
         </div>
     );
 };
+
+Products.propTypes = {
+    products: PropTypes.array
+}
 
 export default Products;
