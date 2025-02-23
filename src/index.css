@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+.font-sora{
+  font-family: "Sora", serif;
+}
+
+.active {
+  background-color: cyan;
+  color: blue;
+}
+
+@theme {
+  --color-blueviolet-100: #9538E2
+}

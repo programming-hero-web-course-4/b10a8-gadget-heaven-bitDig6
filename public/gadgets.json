@@ -1,0 +1,163 @@
+[
+      {
+        "product_id": 1,
+        "product_title": "Gaming Laptop GX5",
+        "product_image": "https://i.ibb.co.com/ks1dt2sN/product-1.jpg",
+        "category": "Laptops",
+        "price": 1299.99,
+        "description": "A powerful gaming laptop with high refresh rate display and RTX graphics.",
+        "specification": [
+          "15.6-inch 144Hz Display",
+          "Intel Core i7 12th Gen",
+          "16GB RAM, 512GB SSD",
+          "RTX 3060 Graphics"
+        ],
+        "availability": false,
+        "rating": 4.8
+      },
+      {
+        "product_id": 2,
+        "product_title": "Ultrabook Pro 14",
+        "product_image": "https://i.ibb.co.com/YTcyytK6/product-2.jpg",
+        "category": "Laptops",
+        "price": 1099.99,
+        "description": "Lightweight and powerful ultrabook with all-day battery life.",
+        "specification": [
+          "14-inch Retina Display",
+          "Intel Core i5 11th Gen",
+          "8GB RAM, 512GB SSD",
+          "Fingerprint Sensor"
+        ],
+        "availability": true,
+        "rating": 4.6
+      },
+      {
+        "product_id": 3,
+        "product_title": "Workstation Laptop Z7",
+        "product_image": "https://i.ibb.co.com/7ttFrmcP/product-3.jpg",
+        "category": "Laptops",
+        "price": 1499.99,
+        "description": "A workstation laptop built for professionals and creatives.",
+        "specification": [
+          "17-inch 4K Display",
+          "Intel Xeon Processor",
+          "32GB RAM, 1TB SSD",
+          "RTX 4090 Graphics"
+        ],
+        "availability": true,
+        "rating": 4.9
+      },
+      {
+        "product_id": 4,
+        "product_title": "Budget Laptop B3",
+        "product_image": "https://i.ibb.co.com/TBBcrwyt/product-4.jpg",
+        "category": "Laptops",
+        "price": 799.99,
+        "description": "A budget-friendly laptop with decent performance for daily tasks.",
+        "specification": [
+          "15.6-inch FHD Display",
+          "AMD Ryzen 5",
+          "8GB RAM, 256GB SSD",
+          "Integrated Graphics"
+        ],
+        "availability": true,
+        "rating": 4.3
+      },
+      {
+        "product_id": 5,
+        "product_title": "Convertible Laptop Flex X1",
+        "product_image": "https://i.ibb.co.com/LdLfzpjn/product-5.jpg",
+        "category": "Laptops",
+        "price": 999.99,
+        "description": "A 2-in-1 convertible laptop with a touchscreen display.",
+        "specification": [
+          "13.3-inch Touchscreen Display",
+          "Intel Core i7 12th Gen",
+          "16GB RAM, 512GB SSD",
+          "360° Hinge Design"
+        ],
+        "availability": false,
+        "rating": 4.5
+      },
+      {
+        "product_id": 6,
+        "product_title": "iPhone 14 Pro",
+        "product_image": "https://i.ibb.co.com/8DZqfTM2/product-6.jpg",
+        "category": "iPhone",
+        "price": 1199.99,
+        "description": "Apple's latest flagship phone with pro camera system.",
+        "specification": [
+          "6.1-inch Super Retina XDR Display",
+          "A16 Bionic Chip",
+          "128GB/256GB/512GB Storage",
+          "ProRAW Photography"
+        ],
+        "availability": true,
+        "rating": 4.9
+      },
+      {
+        "product_id": 7,
+        "product_title": "MacBook Air M2",
+        "product_image": "https://i.ibb.co.com/FLZtkTjy/product-7.jpg",
+        "category": "MacBook",
+        "price": 1399.99,
+        "description": "Ultra-thin MacBook with Apple's M2 chip for superior performance.",
+        "specification": [
+          "13.6-inch Liquid Retina Display",
+          "Apple M2 Chip",
+          "256GB/512GB SSD",
+          "18-Hour Battery Life"
+        ],
+        "availability": true,
+        "rating": 4.8
+      },
+      {
+        "product_id": 8,
+        "product_title": "Smartwatch S9",
+        "product_image": "https://i.ibb.co.com/czbFKHM/product-8.webp",
+        "category": "Smart Watches",
+        "price": 249.99,
+        "description": "A feature-rich smartwatch with fitness tracking and AMOLED display.",
+        "specification": [
+          "1.4-inch AMOLED Display",
+          "Heart Rate & SpO2 Monitoring",
+          "GPS & NFC Payments",
+          "7-Day Battery Life"
+        ],
+        "availability": true,
+        "rating": 4.6
+      },
+      {
+        "product_id": 9,
+        "product_title": "Noise-Canceling Headphones",
+        "product_image": "https://i.ibb.co.com/Fq7jx8FX/product-9.jpg",
+        "category": "Accessories",
+        "price": 299.99,
+        "description": "Premium over-ear headphones with active noise cancellation.",
+        "specification": [
+          "40mm Drivers",
+          "Bluetooth 5.2",
+          "30-Hour Battery Life",
+          "Fast Charging"
+        ],
+        "availability": true,
+        "rating": 4.7
+      },
+      {
+        "product_id": 10,
+        "product_title": "Wireless Charging Dock",
+        "product_image": "https://i.ibb.co.com/cXZDVR97/product-10.jpg",
+        "category": "Accessories",
+        "price": 59.99,
+        "description": "A fast wireless charging dock for multiple devices.",
+        "specification": [
+          "Qi-Certified Charging",
+          "Supports Phones, Watches, and Earbuds",
+          "LED Indicator",
+          "Compact & Lightweight"
+        ],
+        "availability": false,
+        "rating": 4.5
+      }
+    ]
+  
