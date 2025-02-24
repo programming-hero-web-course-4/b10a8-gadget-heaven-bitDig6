@@ -23,10 +23,18 @@ const CategoryAndProductContainer = () => {
         }
     })
 
-    const handleCategories = category => {
-            // console.log(category);
+    const handleCategories = (category, id) => {
+            // console.log(category, id);
+
+            document.getElementById('btn-all').classList.remove('btn-activated');
+            document.getElementById('btn-Laptops').classList.remove('btn-activated');
+            document.getElementById('btn-iPhone').classList.remove('btn-activated');
+            document.getElementById('btn-MacBook').classList.remove('btn-activated');
+            document.getElementById('btn-Smart Watches').classList.remove('btn-activated');
+            document.getElementById('btn-Accessories').classList.remove('btn-activated');
+
             const temp = [...uniqueCategories];
-            if( category === 'All Products'){
+            if( category === 'all'){
                 setNewProducts(products);
             }else
             {
@@ -34,6 +42,7 @@ const CategoryAndProductContainer = () => {
                 const newProducts = products.filter( product => product.category === activeCategory)
             setNewProducts(newProducts);
             }
+            document.getElementById(id).classList.add('btn-activated')
             // console.log(activeCategory);      
         }
     

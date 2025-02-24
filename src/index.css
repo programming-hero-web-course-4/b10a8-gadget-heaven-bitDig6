@@ -11,6 +11,11 @@
   color: blue;
 }
 
+.btn-activated {
+  background-color: blue;
+  color: white;
+}
+
 @theme {
   --color-blueviolet-100: #9538E2
 }
