@@ -17,5 +17,6 @@
 }
 
 @theme {
-  --color-blueviolet-100: #9538E2
+  --color-blueviolet-100: #9538E2;
+  --color-olivegreen-100: #309C08;
 }
