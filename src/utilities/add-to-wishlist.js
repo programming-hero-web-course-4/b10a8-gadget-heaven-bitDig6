@@ -29,4 +29,11 @@ const checkWishList = id => {
     return false;
 }
 
-export {getWishListFromLS, addToWishList, checkWishList};
+const removeFromWishlist = id => {
+    const storedWishList = getWishListFromLS();
+    const newStoredWishlist = storedWishList.filter( w => w !== id );
+    localStorage.setItem('wishlist', JSON.stringify(newStoredWishlist));
+    toast('Removed product from Wishlist');
+}
+
+export {getWishListFromLS, addToWishList, checkWishList, removeFromWishlist};

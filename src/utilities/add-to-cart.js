@@ -19,6 +19,13 @@ const addToCart = id => {
     toast("Added to Cart Successfully");
 }
 
+const removeFromCart = id => {
+    const storedCart = getCartFromLS();
+    const newStoredCart = storedCart.filter( s => s !== id );
+    localStorage.setItem('cart', JSON.stringify(newStoredCart));
+    toast('Removed product from Cart');
+}
 
 
-export { getCartFromLS, addToCart };
+
+export { getCartFromLS, addToCart, removeFromCart };

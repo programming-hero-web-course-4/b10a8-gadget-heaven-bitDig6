@@ -16,6 +16,11 @@
   color: white;
 }
 
+.dash-btn-active{
+  background-color: white;
+  color: #9538E2;
+}
+
 @theme {
   --color-blueviolet-100: #9538E2;
   --color-olivegreen-100: #309C08;
