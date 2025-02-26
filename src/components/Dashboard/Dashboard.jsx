@@ -5,12 +5,20 @@ import { useLoaderData } from "react-router";
 import { getWishListFromLS, removeFromWishlist } from "../../utilities/add-to-wishlist";
 import CartItem from "../CartItem/CartItem";
 import WishlistItem from "../WishlistItem/WishlistItem";
+import Modal from "../Modal/Modal";
 
 const Dashboard = () => {
     const [cart, setCart] = useState([]);
     const [wishlist, setWishlist] = useState([]);
 
+
     const products = useLoaderData();
+    let totalPrice = 0;
+    cart.forEach(c => {
+        totalPrice = totalPrice + c.price;
+    })
+    // console.log(totalPrice);
+
 
     const handleShowATab = id => {
         document.getElementById('cart').classList.add('hidden');
@@ -24,20 +32,30 @@ const Dashboard = () => {
 
     const handleSortDescending = () => {
         const newCart = [...cart];
-        const sortedNewCart = newCart.sort( (a,b) => b.price - a.price );
+        const sortedNewCart = newCart.sort((a, b) => b.price - a.price);
         setCart(sortedNewCart);
     }
 
     const handleRemoveFromCart = id => {
         removeFromCart(id);
-        const newCart = [...cart].filter( c => c.product_id !== id );
+        const newCart = [...cart].filter(c => c.product_id !== id);
         setCart(newCart);
     }
 
     const handleRemoveFromWishList = id => {
         removeFromWishlist(id);
-        const newWishlist = [...wishlist].filter( c => c.product_id !== id );
+        const newWishlist = [...wishlist].filter(c => c.product_id !== id);
         setWishlist(newWishlist);
+    }
+
+    const handlePurchase = () => {
+        document.getElementById('dialog').showModal();
+
+        cart.map(c => {
+            removeFromCart(c.product_id);
+        })
+
+        setCart([]);
     }
 
     useEffect(() => {
@@ -71,21 +89,28 @@ const Dashboard = () => {
                 <div className="flex flex-col md:flex-row justify-between items-center mb-10">
                     <h3 className="text-xl font-bold">Cart</h3>
                     <div className="flex flex-col md:flex-row gap-6 items-center">
-                        <h3 className="text-xl font-bold">Total Cost:</h3>
+                        <h3 className="text-xl font-bold">Total Price: $
+                            {Math.round(totalPrice * 100) / 100}
+                        </h3>
                         <div>
                             <button onClick={handleSortDescending}
-                            className="btn mr-5 bg-none border border-blueviolet-100 text-blueviolet-100 text-lg font-semibold rounded-full">
+                                className="btn mr-5 bg-none border border-blueviolet-100 text-blueviolet-100 text-lg font-semibold rounded-full">
                                 Sort By Price <GoSortDesc></GoSortDesc>
                             </button>
-                            <button className="btn rounded-full text-lg font-semibold  text-white bg-blueviolet-100 hover:bg-blue-500">Purchase</button>
+                            <button disabled={cart.length === 0 & true}
+                                onClick={handlePurchase}
+                                className="btn rounded-full text-lg font-semibold  text-white bg-blueviolet-100 hover:bg-blue-500">
+                                Purchase
+                            </button>
+                            <Modal totalPrice={totalPrice}></Modal>
                         </div>
                     </div>
                 </div>
                 {/* cart items */}
                 <div className="grid grid-cols-1 gap-5">
                     {
-                        cart.map(c => <CartItem 
-                            key={c.product_id} 
+                        cart.map(c => <CartItem
+                            key={c.product_id}
                             cartItem={c}
                             handleRemoveFromCart={handleRemoveFromCart}></CartItem>)
                     }
@@ -96,8 +121,8 @@ const Dashboard = () => {
                 <h3 className="text-xl font-bold mb-10">Wishlist</h3>
                 <div className="grid grid-cols-1 gap-5">
                     {
-                        wishlist.map( w => <WishlistItem 
-                            key={w.product_id} 
+                        wishlist.map(w => <WishlistItem
+                            key={w.product_id}
                             wishlistItem={w}
                             handleRemoveFromWishList={handleRemoveFromWishList}></WishlistItem>)
                     }
