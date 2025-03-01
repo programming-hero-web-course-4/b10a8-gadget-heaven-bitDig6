@@ -1,33 +1,34 @@
-import PropTypes from "prop-types";
 import successImg from '../../assets/icons8-success-48.png'
 import { useNavigate } from "react-router";
+import PropTypes from 'prop-types';
 
-const Modal = ({totalPrice}) => {
+const Modal = ({total}) => {
     const navigate = useNavigate();
 
     const handleNavigate = () => {
         navigate('/');
     }
 
+
     return (
         <>
-          <dialog id="dialog" className=" backdrop-blur-2xl">
-                <div className="text-center">
-                    <img src={successImg} alt="" />
-                    <h1>Payment Successful!</h1>
-                    <hr />
-                    <p>Thanks for purchasing.</p>
-                    <p>Total: ${totalPrice}</p>
-                    <button className="btn" autoFocus onClick={handleNavigate}>
-                        Go Towards Success
+            <dialog id="dialog" className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box text-center">
+                    <img className="w-auto mx-auto" src={successImg} alt="" />
+                    <h3 className="font-bold text-lg">Payment Successful</h3>
+                    <p className="py-4">Thank you for purchasing.</p>
+                    <p>Total: ${total}</p>
+                    <button className="btn mt-4 bg-gray-300 hover:bg-gray-400 text-base font-bold hover:text-white w-full rounded-full" onClick={handleNavigate}>
+                        Close
                     </button>
                 </div>
             </dialog>
         </>
     );
 };
+
 Modal.propTypes = {
-    totalPrice: PropTypes.number
+    total: PropTypes.number,
 }
 
 export default Modal;

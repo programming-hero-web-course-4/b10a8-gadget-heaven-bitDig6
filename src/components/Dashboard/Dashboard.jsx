@@ -6,10 +6,14 @@ import { getWishListFromLS, removeFromWishlist } from "../../utilities/add-to-wi
 import CartItem from "../CartItem/CartItem";
 import WishlistItem from "../WishlistItem/WishlistItem";
 import Modal from "../Modal/Modal";
+import { addTitle } from "../../utilities/addDynamicTittle";
 
 const Dashboard = () => {
+    addTitle('Dashboard');
+
     const [cart, setCart] = useState([]);
     const [wishlist, setWishlist] = useState([]);
+    const [total, setTotal] = useState(0);
 
 
     const products = useLoaderData();
@@ -18,7 +22,6 @@ const Dashboard = () => {
         totalPrice = totalPrice + c.price;
     })
     // console.log(totalPrice);
-
 
     const handleShowATab = id => {
         document.getElementById('cart').classList.add('hidden');
@@ -49,14 +52,15 @@ const Dashboard = () => {
     }
 
     const handlePurchase = () => {
+        setTotal(totalPrice);
         document.getElementById('dialog').showModal();
 
         cart.map(c => {
             removeFromCart(c.product_id);
         })
-
         setCart([]);
     }
+
 
     useEffect(() => {
         const storedCartFromLS = getCartFromLS();
@@ -102,7 +106,7 @@ const Dashboard = () => {
                                 className="btn rounded-full text-lg font-semibold  text-white bg-blueviolet-100 hover:bg-blue-500">
                                 Purchase
                             </button>
-                            <Modal totalPrice={totalPrice}></Modal>
+                            <Modal total={total}></Modal>
                         </div>
                     </div>
                 </div>

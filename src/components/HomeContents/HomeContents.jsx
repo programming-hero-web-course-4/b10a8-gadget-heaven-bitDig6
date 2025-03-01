@@ -1,7 +1,10 @@
+import { addTitle } from "../../utilities/addDynamicTittle";
 import Banner from "../Banner/Banner";
 import CategoryAndProductContainer from "../CategoryandProductContainer/CategoryandProductContainer";
 
 const HomeContents = () => {
+    addTitle('Home');
+
     return (
         <main className="bg-[#ECECEC] pb-36 lg:pb-28">
             <Banner></Banner>

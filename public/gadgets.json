@@ -13,7 +13,7 @@
           "RTX 3060 Graphics"
         ],
         "availability": false,
-        "rating": 4.8
+        "rating": 3.7
       },
       {
         "product_id": 2,
@@ -141,7 +141,7 @@
           "Fast Charging"
         ],
         "availability": true,
-        "rating": 4.7
+        "rating": 4.0
       },
       {
         "product_id": 10,
@@ -157,7 +157,7 @@
           "Compact & Lightweight"
         ],
         "availability": false,
-        "rating": 4.5
+        "rating": 3.5
       }
     ]
   

@@ -5,7 +5,7 @@ const ErrorPage = () => {
     const error = useRouteError();
     // console.log(error);
 
-    const errorMsg = error.error.message;
+    const errorMsg = 'Page Not Found';
     const errorStatus = error.status;
     const errorStatusText = error.statusText;
 

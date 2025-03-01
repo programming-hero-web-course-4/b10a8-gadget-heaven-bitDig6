@@ -26,6 +26,4 @@ const removeFromCart = id => {
     toast('Removed product from Cart');
 }
 
-
-
-export { getCartFromLS, addToCart, removeFromCart };
+export { getCartFromLS, addToCart, removeFromCart};
